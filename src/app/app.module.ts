@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,6 +10,9 @@ import { YoutubeLayoutComponent } from './components/layout/youtube-layout/youtu
 import { PostComponent } from './containers/post/post.component';
 import { UsersComponent } from './containers/users/users.component';
 import { ViewUserComponent } from './containers/view-user/view-user.component';
+import { MaterialModule } from './material.module';
+import { FlexLayoutModule, FlexModule } from '@angular/flex-layout';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,13 +22,18 @@ import { ViewUserComponent } from './containers/view-user/view-user.component';
     YoutubeLayoutComponent,
     PostComponent,
     UsersComponent,
-    ViewUserComponent
+    ViewUserComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MaterialModule,
+    FlexLayoutModule,
+    FlexModule,
+    HttpClientModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
